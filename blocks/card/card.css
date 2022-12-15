@@ -1,11 +1,11 @@
 .card {
-    min-height: 360px;
+    /* min-height: 360px; */
     max-width: 282px;
     border-radius: 10px;
-    background-color: white;
+    background-color: #FFFFFF;
     overflow: hidden;
     margin: 0 auto;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 

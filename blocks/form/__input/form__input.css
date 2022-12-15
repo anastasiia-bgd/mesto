@@ -4,9 +4,27 @@
   padding-bottom: 13px;
   width: 100%;
   margin-top: 30px;
-  margin-left: 36px;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
   box-sizing: border-box;
+  max-width: 358px;
+  align-self: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  outline: none;
+}
+
+
+.form__input:first-of-type {
+  margin: 0;
+}
+
+@media screen and (max-width: 680px) {
+  .popup__input {
+    width: 238px;
+    /* margin-right: 0;
+    margin-left: 0; */
+  }
 }

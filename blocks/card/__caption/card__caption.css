@@ -1,9 +1,9 @@
 .card__caption {
-    background-color: #FFFFFF;
     display: flex;
-    justify-content:space-between;
-    width: 246px;
-    margin: 25px auto 0 auto;
+    justify-content: space-between;
+    max-width: 246px;
+    margin: 25px 20px 27px 21px;
     align-items: center;
-    padding-left: 15px;
+    padding: 0;
 }
+

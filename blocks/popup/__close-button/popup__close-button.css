@@ -8,4 +8,19 @@
     position: absolute;
     top: -40px;
     right: -40px;
+    border-style: none;
 }
+
+.popup__close-button:hover {
+    opacity: 0.6;
+  }
+  
+
+@media screen and (max-width: 680px) {
+    .popup__close-button {
+      width: 20px;
+      height: 20px;
+      right: 0px;
+      top: -36px;
+    }
+  }

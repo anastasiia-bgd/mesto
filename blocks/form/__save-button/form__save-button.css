@@ -8,11 +8,23 @@
   font-size: 18px;
   line-height: 22px;
   text-align: center;
-  margin: 48px 36px 37px;
+  margin: 48px auto 0;
   cursor: pointer;
   padding: 0;
+  border: none;
+  outline: none;
 }
 
 .form__save-button:hover {
   opacity: 0.8;
+}
+
+@media screen and (max-width: 680px) {
+  .form__save-button {
+    width: 238px;
+    height: 46px;
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 45px;
+  }
 }

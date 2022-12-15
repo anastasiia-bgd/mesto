@@ -5,18 +5,29 @@
     background-repeat: no-repeat;
     background-position: center;
     border: 1px solid #FFFFFF;
-    margin: 10px auto 0px;
+    /* margin: 10px auto 0px; */
     padding: 0;
     cursor: pointer;
     box-sizing: border-box;
+    align-self: center;
 }
 
 .profile__edit-button:hover {
     opacity: 0.6;
 }
 
-@media screen and (max-width: 750px) {
+/* @media screen and (max-width: 750px) {
     .profile__edit-button {
-        margin-left: 15px;
+        margin: 0;
+    width: 18px;
+    height: 18px;
+    }
+} */
+
+@media screen and (max-width: 320px) {
+    .profile__edit-button {
+        width: 18px;
+        height: 18px;
+        margin: 0;
     }
 }

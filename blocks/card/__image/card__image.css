@@ -1,9 +1,9 @@
 .card__image {
-  width: 100%;
+  width: 282px;
   height: 282px;
   object-fit: cover;
-  /* vertical-align: top; */
-  margin: 0;
+  background-size: cover;
+  /* margin: 0; */
   display: block;
 }
 
