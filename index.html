@@ -19,19 +19,19 @@
                 <img class="profile__avatar" src="./images/avatar.jpg" alt="Аватар">
                 <div class="profile__info">
                     <div class="profile__info-container">
-                    <h1 class="profile__name">Жак-Ив Кусто</h1>
-                    <button class="profile__edit-button"></button>
-                </div>
+                        <h1 class="profile__name">Жак-Ив Кусто</h1>
+                        <button class="profile__edit-button" type="button"></button>
+                    </div>
                     <p class="profile__description">Исследователь океана</p>
                 </div>
-                <button class="profile__add-button"></button>
+                <button class="profile__add-button" type="button"></button>
             </section>
             <section class="elements">
                 <div class="card">
                     <img class="card__image" src="./images/card-altai.jpg" alt="Алтай">
                     <div class="card__caption">
                         <h2 class="card__title">Алтай</h2>
-                        <button class="card__like-button"></button>
+                        <button class="card__like-button" type="button"></button>
                     </div>
                 </div>
                 <div class="card">
@@ -70,24 +70,24 @@
                     </div>
                 </div>
             </section>
-            <footer class="footer">
-                <p class="footer__copyright">© 2020 Mesto Russia</p>
-            </footer>
-
-            <div class="popup">
-                <div class="popup__container">
-                    <button class="popup__close-button"></button>
-                    <form class="form" name="popup_edit-form">
-                    <h2 class="form__heading">Редактировать профиль</h2>
-                    <input class="form__input form__input-name" type="text" name="name" placeholder="Имя">
-                    <input class="form__input form__input-activity" type="text" name="activity" placeholder="Деятельность">
+        </main>
+        <footer class="footer">
+            <p class="footer__copyright">© 2020 Mesto Russia</p>
+        </footer>
+        <div class="popup">
+            <div class="popup__container">
+                <button class="popup__close-button" type="button"></button>
+                <h2 class="form__heading">Редактировать профиль</h2>
+                <form class="form" name="popup_edit-form">
+            
+                    <input class="form__input form__input_name" type="text" name="name" placeholder="Имя">
+                    <input class="form__input form__input_activity" type="text" name="activity"
+                        placeholder="Деятельность">
                     <button class="form__save-button" type="submit">Сохранить</button>
                 </form>
-                </div>
             </div>
-        </main>
+        </div>
     </div>
     <script src="./scripts/index.js"></script>
 </body>
-
 </html>

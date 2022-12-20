@@ -1,5 +1,5 @@
 .form__input {
-  border: 0;
+  border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   padding-bottom: 13px;
   width: 100%;
@@ -13,7 +13,6 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  outline: none;
 }
 
 
@@ -23,8 +22,6 @@
 
 @media screen and (max-width: 680px) {
   .popup__input {
-    width: 238px;
-    /* margin-right: 0;
-    margin-left: 0; */
+    max-width: 238px;
   }
 }

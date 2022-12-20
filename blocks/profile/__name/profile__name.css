@@ -9,16 +9,6 @@
   overflow: hidden;
 }
 
-/* @media screen and (max-width: 750px) {
-  .profile__name {
-    font-size: 27px;
-    line-height: 33px;
-    text-align: center;
-    padding-left: 65px;
-    margin: 0 15px 0 0;
-  }
-} */
-
 @media screen and (max-width: 320px) {
   .profile__name {
     font-size: 27px;

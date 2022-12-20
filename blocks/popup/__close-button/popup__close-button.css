@@ -9,6 +9,8 @@
     top: -40px;
     right: -40px;
     border-style: none;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .popup__close-button:hover {
@@ -20,7 +22,7 @@
     .popup__close-button {
       width: 20px;
       height: 20px;
-      right: 0px;
+      right: 0;
       top: -36px;
     }
   }
