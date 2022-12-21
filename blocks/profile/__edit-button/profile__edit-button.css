@@ -5,11 +5,12 @@
     background-repeat: no-repeat;
     background-position: center;
     border: 1px solid #FFFFFF;
-    /* margin: 10px auto 0px; */
     padding: 0;
     cursor: pointer;
     box-sizing: border-box;
     align-self: center;
+    background-color: rgba(28, 28, 28, 0);
+    background-size: 10px;
 }
 
 .profile__edit-button:hover {
@@ -21,5 +22,6 @@
         width: 18px;
         height: 18px;
         margin: 0;
+        background-size: 7.5px;
     }
 }

@@ -8,13 +8,13 @@
     padding: 0;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
     .elements {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     .elements {
         grid-template-columns: repeat(1, 1fr);
 

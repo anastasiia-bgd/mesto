@@ -11,7 +11,9 @@
     padding: 0;
     box-sizing: border-box;
     object-fit: contain;
-}
+    background-size: 22px;
+    background-color: rgba(28, 28, 28, 0);
+} 
 
 .profile__add-button:hover {
     opacity: 0.6;
@@ -21,5 +23,6 @@
     .profile__add-button {
       width: 282px;
       margin: 0 auto 36px;
+      background-size: 16px;
     }
 }
