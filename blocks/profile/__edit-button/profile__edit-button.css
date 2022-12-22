@@ -9,8 +9,8 @@
     cursor: pointer;
     box-sizing: border-box;
     align-self: center;
-    background-color: rgba(28, 28, 28, 0);
-    background-size: 10px;
+    background-color: transparent;
+    background-size: 10px 10px;
 }
 
 .profile__edit-button:hover {
@@ -22,6 +22,6 @@
         width: 18px;
         height: 18px;
         margin: 0;
-        background-size: 7.5px;
+        background-size: 7.5px 7.5px;
     }
 }

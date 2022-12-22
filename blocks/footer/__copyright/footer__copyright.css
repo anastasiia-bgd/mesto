@@ -6,6 +6,11 @@
   color: #545454;
   margin: 67px auto 60px;
 }
+@media screen and (max-width: 900px) {
+  .footer__copyright {
+    margin: 67px 20px 60px ;
+  }
+}
 
 @media screen and (max-width: 750px) {
   .footer__copyright {
