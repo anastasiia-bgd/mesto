@@ -10,11 +10,10 @@ let elementsContainer = document.querySelector('.elements')
 let cardTemplate = document.querySelector('#card-template').content;
 let addButton = document.querySelector('.profile__add-button')
 let popupAdd = document.querySelector('.popup_type_add')
-let addCardButton = document.querySelector('.form__add_button')
+let addCardButton = popupAdd.querySelector('.form__save-button')
 let titleCard = document.querySelector('.form__input_info_title')
 let linkCard = document.querySelector('.form__input_info_link')
-let popupAddCard = document.querySelector('.popup_type_add')
-let formAddCard = popupAddCard.querySelector('.form')
+let formAddCard = popupAdd.querySelector('.form')
 let popupImage = document.querySelector('.popup_type_image')
 let popupImageCaption = popupImage.querySelector('.popup__caption');
 let popupImageOpened = popupImage.querySelector('.popup__image');
@@ -22,7 +21,7 @@ let likeButton = cardTemplate.querySelector('.card__like-button')
 
 function openPopup(popup) {
     popup.classList.add('popup_opened');
-}git 
+}
 
 function closePopup(popup) {
     popup.classList.remove('popup_opened')
@@ -69,7 +68,7 @@ addCardButton.addEventListener('click', function (evt) {
     evt.preventDefault();
     addCard(titleCard.value, linkCard.value)
     formAddCard.reset();
-    closePopup(popupAddCard);
+    closePopup(popupAdd);
 })
 
 
