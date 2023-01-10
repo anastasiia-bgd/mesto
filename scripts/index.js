@@ -10,7 +10,7 @@ let elementsContainer = document.querySelector('.elements')
 let cardTemplate = document.querySelector('#card-template').content;
 let addButton = document.querySelector('.profile__add-button')
 let popupAdd = document.querySelector('.popup_type_add')
-let addCardButton = document.querySelector('.form_add_button')
+let addCardButton = document.querySelector('.form__add_button')
 let titleCard = document.querySelector('.form__input_info_title')
 let linkCard = document.querySelector('.form__input_info_link')
 let popupAddCard = document.querySelector('.popup_type_add')
@@ -22,7 +22,7 @@ let likeButton = cardTemplate.querySelector('.card__like-button')
 
 function openPopup(popup) {
     popup.classList.add('popup_opened');
-}
+}git 
 
 function closePopup(popup) {
     popup.classList.remove('popup_opened')
