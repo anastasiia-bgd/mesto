@@ -27,7 +27,7 @@
                 <button class="profile__add-button" type="button"></button>
             </section>
             <section class="elements">
-                <div class="card">
+                <!-- <div class="card">
                     <img class="card__image" src="./images/card-altai.jpg" alt="Алтай">
                     <div class="card__caption">
                         <h2 class="card__title">Алтай</h2>
@@ -68,13 +68,13 @@
                         <h2 class="card__title">Хибины</h2>
                         <button class="card__like-button" type="button"></button>
                     </div>
-                </div>
+                </div> -->
             </section>
         </main>
         <footer class="footer">
             <p class="footer__copyright" lang="En">© 2020 Mesto Russia</p>
         </footer>
-        <div class="popup">
+        <div class="popup popup_type_edit">
             <div class="popup__container">
                 <button class="popup__close-button" type="button"></button>
                 <h2 class="popup__heading">Редактировать профиль</h2>
@@ -86,7 +86,37 @@
                 </form>
             </div>
         </div>
+        <div class="popup popup_type_add">
+            <div class="popup__container">
+                <button class="popup__close-button" type="button"></button>
+                <h2 class="popup__heading">Новое место</h2>
+                <form class="form" name="popup_edit-form">
+                    <input class="form__input form__input_info_title" type="text" name="title" placeholder="Название">
+                    <input class="form__input form__input_info_link" type="text" name="link"
+                        placeholder="Ссылка на картинку">
+                    <button class="form__save-button add_card_button" type="submit">Создать</button>
+                </form>
+            </div>
+        </div>
+        <div class="popup popup_type_image">
+            <figure class="popup__image-container">
+              <button class="popup__close-button" type="button"></button>
+              <img class="popup__image" src="#" alt="">
+              <figcaption class="popup__caption"></figcaption>
+            </figure>
+          </div>
     </div>
+    <template id="card-template">
+        <article class="card">
+          <button class="card__trash" type="button"></button>
+          <img class="card__image" src="#" alt="">
+          <div class="card__caption">
+            <h2 class="card__title"></h2>
+            <button class="card__like-button" type="button"></button>
+          </div>
+        </article>
+      </template>
+      <script src="./scripts/cards.js" defer></script>
     <script src="./scripts/index.js" defer></script>
 </body>
 </html>
