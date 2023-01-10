@@ -1,7 +1,6 @@
-const popupList = document.querySelectorAll('.popup');
+let popupList = document.querySelectorAll('.popup');
 let editButton = document.querySelector('.profile__edit-button');
 let popupEdit = document.querySelector('.popup_type_edit');
-let closeButton = document.querySelector('.popup__close-button');
 let inputName = document.querySelector('.form__input_info_name');
 let inputActivity = document.querySelector('.form__input_info_activity')
 let profileName = document.querySelector('.profile__name')
@@ -11,7 +10,6 @@ let elementsContainer = document.querySelector('.elements')
 let cardTemplate = document.querySelector('#card-template').content;
 let addButton = document.querySelector('.profile__add-button')
 let popupAdd = document.querySelector('.popup_type_add')
-let popupAddCloseButton = popupAdd.querySelector('.popup__close-button');
 let addCardButton = document.querySelector('.add_card_button')
 let titleCard = document.querySelector('.form__input_info_title')
 let linkCard = document.querySelector('.form__input_info_link')
@@ -20,7 +18,7 @@ let formAddCard = popupAddCard.querySelector('.form')
 let popupImage = document.querySelector('.popup_type_image')
 let popupImageCaption = popupImage.querySelector('.popup__caption');
 let popupImageOpened = popupImage.querySelector('.popup__image');
-let popupImageCloseButton = popupImage.querySelector('.popup__close-button')
+let likeButton = cardTemplate.querySelector('.card__like-button')
 
 function openPopup(popup) {
     popup.classList.add('popup_opened'); 
@@ -67,6 +65,14 @@ popupList.forEach((item) => {
     })
   })  
 
+  addCardButton.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    addCard(titleCard.value, linkCard.value)
+    formAddCard.reset();
+    closePopup(popupAddCard);
+  })
+  
+
 function createCard (title, link) {
  
     const cardElement = cardTemplate.querySelector('.card').cloneNode(true);
@@ -88,14 +94,9 @@ function createCard (title, link) {
   
     return cardElement;
   }
-  // add default card
+  
   [...initialCards].reverse().forEach(function(card) {
     addCard(card.name, card.link);
   })
 
-  addCardButton.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    addCard(titleCard.value, linkCard.value)
-    formAddCard.reset();
-    closePopup(popupAddCard);
-  })
+  
