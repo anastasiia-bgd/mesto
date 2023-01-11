@@ -1,23 +1,22 @@
-let popupList = document.querySelectorAll('.popup');
-let editButton = document.querySelector('.profile__edit-button');
-let popupEdit = document.querySelector('.popup_type_edit');
-let inputName = document.querySelector('.form__input_info_name');
-let inputActivity = document.querySelector('.form__input_info_activity')
-let profileName = document.querySelector('.profile__name')
-let profileDescription = document.querySelector('.profile__description')
-let form = document.querySelector('.form')
-let elementsContainer = document.querySelector('.elements')
-let cardTemplate = document.querySelector('#card-template').content;
-let addButton = document.querySelector('.profile__add-button')
-let popupAdd = document.querySelector('.popup_type_add')
-let addCardButton = popupAdd.querySelector('.form__save-button')
-let titleCard = document.querySelector('.form__input_info_title')
-let linkCard = document.querySelector('.form__input_info_link')
-let formAddCard = popupAdd.querySelector('.form')
-let popupImage = document.querySelector('.popup_type_image')
-let popupImageCaption = popupImage.querySelector('.popup__caption');
-let popupImageOpened = popupImage.querySelector('.popup__image');
-let likeButton = cardTemplate.querySelector('.card__like-button')
+const popupList = document.querySelectorAll('.popup');
+const editButton = document.querySelector('.profile__edit-button');
+const popupEdit = document.querySelector('.popup_type_edit');
+const inputName = document.querySelector('.form__input_info_name');
+const inputActivity = document.querySelector('.form__input_info_activity')
+const profileName = document.querySelector('.profile__name')
+const profileDescription = document.querySelector('.profile__description')
+const form = document.querySelector('.form')
+const elementsContainer = document.querySelector('.elements')
+const cardTemplate = document.querySelector('#card-template').content;
+const buttonAddForm = document.querySelector('.profile__add-button')
+const popupAdd = document.querySelector('.popup_type_add')
+const buttonSubmitForm = popupAdd.querySelector('.form__save-button')
+const titleCard = document.querySelector('.form__input_info_title')
+const linkCard = document.querySelector('.form__input_info_link')
+const formAddCard = popupAdd.querySelector('.form')
+const popupImage = document.querySelector('.popup_type_image')
+const popupImageCaption = popupImage.querySelector('.popup__caption');
+const popupImageOpened = popupImage.querySelector('.popup__image');
 
 function openPopup(popup) {
     popup.classList.add('popup_opened');
@@ -37,10 +36,10 @@ form.addEventListener('submit', function (evt) {
     evt.preventDefault();
     profileName.textContent = inputName.value;
     profileDescription.textContent = inputActivity.value;
-    popup.classList.remove('popup_opened');
+    closePopup(popupEdit);
 })
 
-addButton.addEventListener('click', function () {
+buttonAddForm.addEventListener('click', function () {
     openPopup(popupAdd)
 })
 
@@ -49,10 +48,10 @@ function addCard(title, link) {
 }
 
 function openImagePopup(title, link) {
-    openPopup(popupImage);
     popupImageCaption.textContent = title;
     popupImageOpened.src = link;
     popupImageOpened.alt = title;
+    openPopup(popupImage);
 }
 
 popupList.forEach((item) => {
@@ -64,22 +63,22 @@ popupList.forEach((item) => {
     })
 })
 
-addCardButton.addEventListener('click', function (evt) {
+buttonSubmitForm.addEventListener('click', function (evt) {
     evt.preventDefault();
     addCard(titleCard.value, linkCard.value)
-    formAddCard.reset();
     closePopup(popupAdd);
+    formAddCard.reset();
 })
 
 
 function createCard(title, link) {
 
-    let cardElement = cardTemplate.querySelector('.card').cloneNode(true);
-    let cardImage = cardElement.querySelector('.card__image')
+    const cardElement = cardTemplate.querySelector('.card').cloneNode(true);
+    const cardImage = cardElement.querySelector('.card__image')
 
     cardElement.querySelector('.card__title').textContent = title;
-    cardElement.querySelector('.card__image').src = link;
-    cardElement.querySelector('.card__image').alt = title;
+    cardImage.src = link;
+    cardImage.alt = title;
 
 
     cardElement.querySelector('.card__like-button').addEventListener('click', function (evt) {
