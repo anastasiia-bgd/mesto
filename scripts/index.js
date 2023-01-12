@@ -20,10 +20,12 @@ const popupImageOpened = popupImage.querySelector('.popup__image');
 
 function openPopup(popup) {
     popup.classList.add('popup_opened');
+    document.addEventListener('keydown', handleEscape);
 }
 
 function closePopup(popup) {
     popup.classList.remove('popup_opened')
+    document.removeEventListener('keydown', handleEscape);
 }
 
 editButton.addEventListener('click', function () {
@@ -62,6 +64,13 @@ popupList.forEach((item) => {
         }
     })
 })
+
+function handleEscape(evt) {
+    if (evt.key === 'Escape') {
+      const popup = document.querySelector('.popup_opened');
+      closePopup(popup);
+      }
+    }
 
 buttonSubmitForm.addEventListener('click', function (evt) {
     evt.preventDefault();
