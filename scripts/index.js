@@ -5,7 +5,7 @@ const inputName = document.querySelector('.form__input_info_name');
 const inputActivity = document.querySelector('.form__input_info_activity')
 const profileName = document.querySelector('.profile__name')
 const profileDescription = document.querySelector('.profile__description')
-const form = document.querySelector('.form')
+const profileForm = popupEdit.querySelector('.form')
 const elementsContainer = document.querySelector('.elements')
 const cardTemplate = document.querySelector('#card-template').content;
 const buttonAddForm = document.querySelector('.profile__add-button')
@@ -34,7 +34,7 @@ editButton.addEventListener('click', function () {
     inputActivity.value = profileDescription.textContent
 })
 
-form.addEventListener('submit', function (evt) {
+profileForm.addEventListener('submit', function (evt) {
     evt.preventDefault();
     profileName.textContent = inputName.value;
     profileDescription.textContent = inputActivity.value;
@@ -72,11 +72,14 @@ function handleEscape(evt) {
       }
     }
 
-buttonSubmitForm.addEventListener('click', function (evt) {
+    formAddCard.addEventListener('submit', function (evt) {
     evt.preventDefault();
     addCard(titleCard.value, linkCard.value)
-    closePopup(popupAdd);
+    const button = evt.submitter;
+    button.disabled = true;
+    button.classList.add('form__save-button_disabled');
     formAddCard.reset();
+    closePopup(popupAdd);
 })
 
 
