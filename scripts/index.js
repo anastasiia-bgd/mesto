@@ -1,5 +1,5 @@
 import {Card} from "./Card.js";
-import {Validate} from "./Validate.js"
+import {FormValidator} from "./FormValidator.js"
 import {initialCards} from "./initialCards.js";
 import {config} from "./config.js"
 
@@ -72,13 +72,13 @@ function addInitialCard() {
 
 addInitialCard()
 
-const validateAddCard = new Validate(config, formAddCard);
-validateAddCard.enableValidation();
-const validateEditCard = new Validate(config, profileForm);
-validateEditCard.enableValidation();
+const FormValidatorAddCard = new FormValidator(config, formAddCard);
+FormValidatorAddCard.enableValidation();
+const FormValidatorEditCard = new FormValidator(config, profileForm);
+FormValidatorEditCard.enableValidation();
 
 buttonAddForm.addEventListener('click', () => {
-    validateAddCard.resetValidation();
+    FormValidatorAddCard.resetValidation();
     openPopup(popupAdd)
 })
 
@@ -86,7 +86,7 @@ buttonAddForm.addEventListener('click', () => {
 function handleFormSubmitAddCard (evt) {
         evt.preventDefault();
         const data = {
-            title: titleCard.value,
+            name: titleCard.value,
             link: linkCard.value 
         }
         addCard(data);
