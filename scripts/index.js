@@ -1,6 +1,6 @@
-import { Card } from "./Card.js";
-import { Validate} from './Validate.js'
-import { initialCards } from "./initialCards.js";
+import {Card} from "./Card.js";
+import {Validate} from "./Validate.js"
+import {initialCards} from "./initialCards.js";
 import {config} from "./config.js"
 
 const popupList = document.querySelectorAll('.popup');
@@ -53,10 +53,10 @@ function handleEscape(evt) {
     }
 }
 
-buttonAddForm.addEventListener('click', () => {
-    validationFormAddCard.resetValidation();
-    openPopup(popupAdd)
-})
+function createCard(item) {
+    const card = new Card(item, '#card-template', openImagePopup)
+    return card.generateCard();
+}
 
 function addCard(cardData) {
     const cardElement = createCard(cardData);
@@ -69,18 +69,18 @@ function addInitialCard() {
         elementsContainer.append(cardElement);
   });
 }
-function createCard(item) {
-    const card = new Card(item, '#card-template', openImagePopup)
-    return card.generateCard();
-}
 
 addInitialCard()
 
-const validationFormAddCard = new Validate(config, formAddCard);
-validationFormAddCard.enableValidation();
-const validationFormEditCard = new Validate(config, profileForm);
-validationFormEditCard.enableValidation();
+const validateAddCard = new Validate(config, formAddCard);
+validateAddCard.enableValidation();
+const validateEditCard = new Validate(config, profileForm);
+validateEditCard.enableValidation();
 
+buttonAddForm.addEventListener('click', () => {
+    validateAddCard.resetValidation();
+    openPopup(popupAdd)
+})
 
 
 function handleFormSubmitAddCard (evt) {
@@ -110,30 +110,5 @@ popupList.forEach((item) => {
         }
     })
 })
-
-
-// formAddCard.addEventListener('submit', (evt) => {
-//     evt.preventDefault();
-  
-//     const data = {
-//       title: titleCard.value,
-//       link: linkCard.value 
-//     };
-  
-//     addCard(data);
-//     formAddCard.reset();
-//     closePopup(popupAddCard);
-//   })
-
-// function handleFormSubmitAddCard (evt) {
-//     evt.preventDefault();
-//     const data = {
-//         title: titleCard.value,
-//         link: linkCard.value 
-//     }
-//     addCard(item);
-//     formAddCard.reset();
-//     closePopup(popupAddCard);
-//   }
 
   formAddCard.addEventListener('submit', handleFormSubmitAddCard);

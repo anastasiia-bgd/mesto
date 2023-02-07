@@ -6,7 +6,6 @@ export class Validate  {
   this._buttonElement = this._formElement.querySelector(this._config.submitButtonSelector);
 };
 
-
 _showInputError = (_formElement, inputElement, _config) => {
     const errorElement = this._formElement.querySelector(`.${inputElement.id}-error`);
     inputElement.classList.add(this._config.inputErrorClass);
