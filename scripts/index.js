@@ -31,6 +31,9 @@ function openPopup(popup) {
 function closePopup(popup) {
     popup.classList.remove('popup_opened')
     document.removeEventListener('keydown', handleEscape);
+    titleCard.value = ""
+    linkCard.value = "" 
+
 }
 // попап картинка
 function openImagePopup(title, link) {
