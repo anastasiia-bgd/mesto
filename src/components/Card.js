@@ -21,7 +21,7 @@ export class Card {
             this._deleteCard();
         });
         this._likeButton.addEventListener('click', () => {
-            this._addLike();
+            this._toggleLike();
         });
         this._cardImage.addEventListener('click', () => {
             this._openImagePopup(this._name, this._link);
@@ -31,7 +31,7 @@ export class Card {
     _deleteCard() {
         this._newCard.remove();
     }
-    _addLike() {
+    _toggleLike() {
         this._likeButton.classList.toggle('card__like-button_active');
     }
     _openPopupImage() {
