@@ -37,4 +37,7 @@
 .form__input-error_active{visibility:visible}
 .form__input_type_error{border-bottom:1px solid red}
 .form__save-button_disabled{background-color:inherit;border:1px solid rgba(0,0,0,.2);color:rgba(0,0,0,.2);cursor:default}
+.card__likes-counter{color:#000;font-size:13px;font-weight:400;line-height:16px}
+.profile__edit-button-avatar{background-color:transparent;background-image:url(a086f758840ae814ecde.svg);background-position:50%;background-repeat:no-repeat;background-size:0 0;border:none;border-radius:50%;cursor:pointer;display:block;height:120px;left:0;position:absolute;top:0;transition:background-color .3s ease-in-out,background-size .3s ease-in-out;width:120px}.profile__edit-button-avatar:hover{background-color:rgba(0,0,0,.8);background-size:26px 26px}
+.profile__container-avatar{position:relative}
 
