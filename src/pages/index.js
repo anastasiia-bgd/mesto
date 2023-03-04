@@ -123,7 +123,7 @@ function handleAddFormSubmit(cardElement) {
   api.addNewCard(cardElement)
     .then(res => {
       initialCardList.addItem(createCard(res));
-      popupAdd.close();
+      popupAddForm.close();
     })
     .catch((err) => {
       console.log(err);
