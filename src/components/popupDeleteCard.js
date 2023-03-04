@@ -13,7 +13,6 @@ export class PopupDeleteCard extends Popup {
       this._form.addEventListener("submit", (evt) => {
         evt.preventDefault();
         this._handleConfirmFormSubmit(this._cardId, this._card);
-        super.close(); // это попап подтверждения удаления карточки, тут нет инпутов и запроса к серверу и блока then. Не уверенаБ что понимаю куда перенести закрытие.
       });
     }
   
